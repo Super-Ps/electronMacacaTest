@@ -46,3 +46,6 @@ $ yarn 安装全部依赖
 执行打包  
 $ yarn react-scripts build   
 $ yarn eletcron-builder  
+
+运行测试
+npm test 
