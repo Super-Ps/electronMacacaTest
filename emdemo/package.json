@@ -1,7 +1,8 @@
 {
-  "name": "knownsec-fed",
+  "name": "emdemo",
   "version": "0.1.0",
   "private": true,
+  "author": "jonnyps",
   "dependencies": {
     "electron-is-dev": "^1.1.0",
     "react": "^16.8.6",
