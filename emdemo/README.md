@@ -35,7 +35,7 @@ yarn  add electron-builder --dev
 添加build配置  
   
 执行打包  
-$ yarn react-scripts build // 先用webpack打包React应用到`build`目录下  
+$ yarn react-scripts build // 先打包React应用到`build`目录下  
 $ yarn eletron-builder // 再用electron-builder打包Electron应用  
 
 
