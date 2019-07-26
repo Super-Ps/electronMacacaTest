@@ -8,8 +8,14 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+           Macaca + react 环境  
         </p>
+        <a 
+          href="https://macacajs.github.io/zh/"
+          rel="noopener noreferrer"
+        >
+          Learn Macaca
+        </a>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,7 +24,11 @@ function App() {
         >
           Learn React
         </a>
+        
       </header>
+      <div>
+         <input placeholder='Macaca'></input>
+      </div>
     </div>
   );
 }
