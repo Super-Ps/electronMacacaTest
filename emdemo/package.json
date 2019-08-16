@@ -4,27 +4,30 @@
   "private": true,
   "author": "jonnyps",
   "dependencies": {
+    "chai": "^4.2.0",
     "electron-is-dev": "^1.1.0",
+    "macaca-chromedriver": "^1.2.1",
+    "mocha": "^6.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
-    "chai": "^4.2.0",
-    "electron-chromedriver": "^2.0.0",
-    "mocha": "^6.2.0",
     "selenium-webdriver": "^4.0.0-alpha.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "node_modules/.bin/mocha  testCase/ ",
+    "test": " concurrently \"node_modules/macaca-chromedriver/exec/ch*\" \"node_modules/.bin/mocha  testCase/\"  ",
     "eject": "react-scripts eject",
     "electron-start": "electron .",
-    "electron-dev": "concurrently \"BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\""
+    "electron-dev": "concurrently \"BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
+    "dist": "electron-builder",
+    "open-t":" node_modules/macaca-chromedriver/exec/ch*  &  node_modules/.bin/mocha  testCase/ "
+    
   },
   "main": "public/electron.js",
   "homepage": "./",
   "build": {
-    "appId": "com.xxx.app",
+    "appId": "electron.test.app",
     "npmRebuild": true,
     "mac": {
       "category": "news",
