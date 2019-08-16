@@ -21,32 +21,64 @@
     "electron-start": "electron .",
     "electron-dev": "concurrently \"BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
     "dist": "electron-builder",
-    "open-t":" node_modules/macaca-chromedriver/exec/ch*  &  node_modules/.bin/mocha  testCase/ "
-    
+    "open-t": " node_modules/macaca-chromedriver/exec/ch*  &  node_modules/.bin/mocha  testCase/ ",
+    "packageMac": "electron-packager electronDriver  --platform=darwin --arch=x64 --out ~/  --icon=build/static/favicon.ico "
   },
   "main": "public/electron.js",
   "homepage": "./",
   "build": {
-    "appId": "electron.test.app",
-    "npmRebuild": true,
-    "mac": {
-      "category": "news",
-      "icon": "build/icon.png"
-    },
-    "win": {
-      "icon": "build/icon.png",
-      "target": "nsis"
-    },
-    "nsis": {
-      "allowToChangeInstallationDirectory": true,
-      "allowElevation": false,
-      "createDesktopShortcut": true,
-      "menuCategory": true,
-      "oneClick": false
+    "productName": "electron-builder-start",
+    "appId": "org.simulatedgreg.electron-builder-start",
+    "directories": {
+      "output": "dist"
     },
     "files": [
-      "build/**/*"
-    ]
+      "dist/electron/**/*",
+      "node_modules/",
+      "package.json"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "electron-builder-start"
+     
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 410,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        },
+        {
+          "x": 130,
+          "y": 150,
+          "type": "file"
+        }
+      ]
+    },
+    "mac": {
+      "icon": "build/icons/icon.icns"
+    },
+    "win": {
+      "icon": "build/icons/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "ia32"
+          ]
+        }
+      ]
+    },
+    "linux": {
+      "icon": "build/icons"
+    }
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -67,6 +99,7 @@
     "concurrently": "^4.1.1",
     "electron": "^5.0.8",
     "electron-builder": "^21.1.5",
+    "electron-packager": "^14.0.4",
     "wait-on": "^3.3.0"
   }
 }
