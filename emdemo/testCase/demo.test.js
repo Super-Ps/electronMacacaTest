@@ -10,7 +10,7 @@ const driver = new webdriver.Builder()
   .withCapabilities({
     chromeOptions: {
       // 这里设置Electron的路径
-      binary: '/Users/jonny/Documents/electronDemo/ElectronMacacaDemo/emdemo/dist/mac/emdemo.app/Contents/MacOS/emdemo'
+      binary: '/Applications/electron-builder-start.app/Contents/MacOS/electron-builder-start'
     }
   })
   .forBrowser('electron')

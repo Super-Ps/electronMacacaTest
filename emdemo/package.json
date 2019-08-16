@@ -21,8 +21,8 @@
     "electron-start": "electron .",
     "electron-dev": "concurrently \"BROWSER=none react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
     "dist": "electron-builder",
-    "open-t": " node_modules/macaca-chromedriver/exec/ch*  &  node_modules/.bin/mocha  testCase/ ",
-    "packageMac": "electron-packager electronDriver  --platform=darwin --arch=x64 --out ~/  --icon=build/static/favicon.ico "
+    "open-t": " node_modules/macaca-chromedriver/exec/ch*  &  node_modules/.bin/mocha  testCase/ "
+   
   },
   "main": "public/electron.js",
   "homepage": "./",

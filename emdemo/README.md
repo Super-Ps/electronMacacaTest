@@ -34,9 +34,13 @@ yarn  add electron-builder --dev
 
 添加build配置  
   
+
+  
 执行打包  
-$ yarn react-scripts build // 先打包React应用到`build`目录下  
-$ yarn eletron-builder // 再用electron-builder打包Electron应用  
+$ npm run build // 先打包React应用到`build`目录下  
+$ npm run dist // 再用electron-builder打包Electron应用
+在 dist 选择dmg安装，然后找到安装路劲 替换到demo.test.js的Electron的路径
+最后执行 npm run open-t
 
 
 
