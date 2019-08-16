@@ -47,5 +47,5 @@ $ yarn 安装全部依赖
 $ yarn react-scripts build   
 $ yarn eletcron-builder  
 
-运行测试
-npm test 
+找到对应操作系统的安装路劲，并在用例中指明，再运行
+npm run open-t
