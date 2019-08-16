@@ -1,8 +1,9 @@
 language: node_js
-sudo: false
+sudo: true
 node_js:
   - 10
+install:
+    - npm install
 script:
-  - npm i
   - npm run build
   - npm run dist
