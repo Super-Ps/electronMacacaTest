@@ -1,9 +1,10 @@
 language: node_js
 sudo: true
 node_js:
-  - 10
+ - 10
 install:
-  - npm install
+ - cd emdemo
 script:
-  - npm run build
-  - npm run dist
+ - npm install 
+ - npm run build
+ - npm run dist
